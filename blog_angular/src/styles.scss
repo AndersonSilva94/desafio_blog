@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #FFFFFF;
+  --white-opacity-20: #FFFFFF20;
+  --white-opacity-50: #FFFFFF50;
+  --white-200: #F3F5F7;
+  --gray: #717171;
+  --gray-dark: #1A202C;
+  --purple: #574AE8;
+  --gradient: linear-gradient(to right,#574AE8, #3EA1DB);
+}
