@@ -1,1 +1,8 @@
-<p>card-news works!</p>
+<div class="card">
+  <div class="card-header">
+    <p>{{ mockCard.publicationDate | date: 'd MMMM, y' : '' : 'pt-BR' }}</p>
+    <img src="../../../../assets/images/unlike.svg" alt="">
+  </div>
+  <h2 class="card-title">{{ mockCard.title }}</h2>
+  <p class="card-sinopse">{{ mockCard.sinopse }}</p>
+</div>
