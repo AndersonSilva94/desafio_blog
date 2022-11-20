@@ -1,10 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --white: #FFFFFF;
   --white-opacity-20: #FFFFFF20;
@@ -14,4 +8,14 @@
   --gray-dark: #1A202C;
   --purple: #574AE8;
   --gradient: linear-gradient(to right,#574AE8, #3EA1DB);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--white-200);
 }

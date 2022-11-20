@@ -1,0 +1,14 @@
+.container {
+  &-list-card {
+    margin: 0 auto;
+    padding: 100px 20%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    &-list-card {
+      padding: 50px 5%;
+    }
+  }
+}
