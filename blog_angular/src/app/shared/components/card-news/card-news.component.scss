@@ -2,6 +2,7 @@
   background: var(--white);
   border-radius: 5px;
   padding: 25px;
+  margin-bottom: 50px;
 
   &-header {
     display: flex;
@@ -46,6 +47,7 @@
 @media screen and (max-width: 992px) {
   .card {
     padding: 16px;
+    margin-bottom: 25px;
 
     &-header {
       p {
