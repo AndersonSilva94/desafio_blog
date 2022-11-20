@@ -1,0 +1,31 @@
+section {
+  background: var(--gradient);
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+
+  div {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px 20%;
+
+    p {
+      color: var(--white);
+      font-family: 'Lexend Deca', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+
+      a {
+        color: var(--white);
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+          color: var(--white-opacity-50);
+        }
+      }
+    }
+  }
+}

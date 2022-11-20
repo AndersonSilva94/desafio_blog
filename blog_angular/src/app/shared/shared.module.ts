@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { InputSearchComponent } from './components/input-search/input-search.component';
 import { CardNewsComponent } from './components/card-news/card-news.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -10,7 +11,8 @@ import { CardNewsComponent } from './components/card-news/card-news.component';
   declarations: [
     HeaderComponent,
     InputSearchComponent,
-    CardNewsComponent
+    CardNewsComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { CardNewsComponent } from './components/card-news/card-news.component';
   exports: [
     HeaderComponent,
     InputSearchComponent,
-    CardNewsComponent
+    CardNewsComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }
