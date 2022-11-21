@@ -1,1 +1,13 @@
-<p>news-details works!</p>
+<section>
+  <div class="header">
+    <p>{{ news.publicationDate | date: 'd MMMM, y' : '' : 'pt-BR' }}</p>
+    <img src="../../../../assets/images/unlike.svg" alt="">
+  </div>
+
+  <h1 class="title">{{ news.title }}</h1>
+  <p class="sinopse">{{ news.sinopse }}</p>
+  <div [innerHTML]="news.text" class="content"></div>
+  <div class="goBack" (click)="goBack()">
+    <p>Voltar</p>
+  </div>
+</section>
