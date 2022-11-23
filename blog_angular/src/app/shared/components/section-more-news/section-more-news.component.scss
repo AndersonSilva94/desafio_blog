@@ -1,0 +1,46 @@
+.section {
+  font-family: 'Lexend Deca', sans-serif;
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+    &-card {
+      background: var(--white);
+      width: 100%;
+      padding: 20px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      img {
+        max-width: 300px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &-title {
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+
+      &-sinopse {
+        height: 100px;
+        overflow: hidden;
+        text-align: justify;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
