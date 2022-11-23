@@ -27,10 +27,6 @@ section {
     font-size: 30px;
     font-weight: 400;
     margin-bottom: 6px;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 
   .sinopse {
@@ -105,5 +101,6 @@ section {
 
   .more-news {
     padding: 12.5px 5% 50px 5%;
+    margin-bottom: 50px;
   }
 }
