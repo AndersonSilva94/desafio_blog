@@ -1,5 +1,5 @@
 section {
-  padding: 100px 20%;
+  padding: 100px 20% 25px 20%;
 
   .header {
     display: flex;
@@ -27,10 +27,6 @@ section {
     font-size: 30px;
     font-weight: 400;
     margin-bottom: 6px;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 
   .sinopse {
@@ -71,9 +67,14 @@ section {
   }
 }
 
+.more-news {
+  padding: 25px 20% 100px 20%;
+}
+
 @media screen and (max-width: 992px) {
   section {
-    padding: 50px 5%;
+    padding: 50px 5% 12.5px 5%;
+
     .header {
       p {
         font-size: 14px;
@@ -96,5 +97,10 @@ section {
     .content {
       font-size: 16px;
     }
+  }
+
+  .more-news {
+    padding: 12.5px 5% 50px 5%;
+    margin-bottom: 50px;
   }
 }

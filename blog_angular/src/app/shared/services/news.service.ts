@@ -19,4 +19,8 @@ export class NewsService {
   getNewsById(id: number): Observable<any> {
     return of(this.news.response.find((el) => el.id === id))
   }
+
+  getOtherNews(id: number): Observable<any> {
+    return of(this.news.response.filter((el) => el.id !== id))
+  }
 }

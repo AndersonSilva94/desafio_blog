@@ -4,6 +4,7 @@ import { HeaderComponent } from 'src/app/shared/components/header/header.compone
 import { InputSearchComponent } from './components/input-search/input-search.component';
 import { CardNewsComponent } from './components/card-news/card-news.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SectionMoreNewsComponent } from './components/section-more-news/section-more-news.component';
 
 
 
@@ -12,7 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     InputSearchComponent,
     CardNewsComponent,
-    FooterComponent
+    FooterComponent,
+    SectionMoreNewsComponent
   ],
   imports: [
     CommonModule
@@ -21,7 +23,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     InputSearchComponent,
     CardNewsComponent,
-    FooterComponent
+    FooterComponent,
+    SectionMoreNewsComponent
   ]
 })
 export class SharedModule { }

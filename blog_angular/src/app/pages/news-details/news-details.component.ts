@@ -13,6 +13,7 @@ export class NewsDetailsComponent implements OnInit {
 
   newsId!: number;
   news!: News
+  moreNewsList!: News[];
 
   constructor(
     private newsService: NewsService,
@@ -23,7 +24,8 @@ export class NewsDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.newsId = Number(this.route.snapshot.params["id"])
     if(this.newsId) {
-      this.getNewsById(this.newsId)
+      this.getNewsById(this.newsId);
+      this.getOtherNews(this.newsId)
     }
   }
 
@@ -31,6 +33,14 @@ export class NewsDetailsComponent implements OnInit {
     this.newsService.getNewsById(id)
       .subscribe(
         (res) => this.news = res,
+        (err) => console.error(err)
+      )
+  }
+
+  getOtherNews(id: number) {
+    this.newsService.getOtherNews(id)
+      .subscribe(
+        (res) => this.moreNewsList = res,
         (err) => console.error(err)
       )
   }

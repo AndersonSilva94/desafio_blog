@@ -4,4 +4,5 @@ export interface News {
   title: string;
   sinopse: string;
   text: string;
+  image?: string
 }
