@@ -1,8 +1,12 @@
 <div class="section">
   <h2>Mais notícias</h2>
-  <div class="section-card" *ngFor="let news of newsList">
-    <img [src]="news.image ? news.image : '../../../../assets/images/not-found.svg'" alt=""/>
-    <h3>{{ news.title }}</h3>
-    <p>{{ news.sinopse }}</p>
+  <div class="section-list">
+    <div class="section-list-card" *ngFor="let news of newsList" (click)="goToNews(news.id)">
+      <img [src]="news.image ? news.image : '../../../../assets/images/not-found.svg'" alt=""/>
+      <h3 class="section-list-card-title">{{ news.title }}</h3>
+      <div class="section-list-card-sinopse">
+        <p>{{ news.sinopse }}</p>
+      </div>
+    </div>
   </div>
 </div>
