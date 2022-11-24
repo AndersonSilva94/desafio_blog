@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { AppComponent } from 'src/app/app.component';
 import { HomeComponent } from 'src/app/pages/home/home.component';
-import { NotFoundComponent } from 'src/app/pages/not-found/not-found.component';
+import { NotFoundPageComponent } from 'src/app/pages/not-found-page/not-found-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 registerLocaleData(localePt);
@@ -16,7 +16,7 @@ registerLocaleData(localePt);
   declarations: [
     AppComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
