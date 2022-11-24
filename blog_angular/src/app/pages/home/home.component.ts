@@ -9,7 +9,7 @@ import { NewsService } from 'src/app/shared/services/news.service';
 })
 export class HomeComponent implements OnInit {
 
-  news!: News[]
+  news: News[] = []
 
   constructor(
     private newsService: NewsService
