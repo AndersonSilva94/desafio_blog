@@ -1,0 +1,32 @@
+section {
+  margin: 0 auto;
+  padding: 100px 20%;
+
+  div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+
+    p {
+      color: var(--gray);
+      font-family: 'Lexend Deca', sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      margin: 5px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  section {
+    padding: 50px 5%;
+
+    div {
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+}

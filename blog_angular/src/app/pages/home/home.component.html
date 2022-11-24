@@ -1,9 +1,12 @@
 <app-input-search></app-input-search>
 
-<section class="container">
+<section class="container" *ngIf="news.length; else notFound">
   <div class="container-list-card">
     <app-card-news
       [listNews]="news"
     ></app-card-news>
   </div>
 </section>
+<ng-template #notFound>
+  <app-not-found></app-not-found>
+</ng-template>
