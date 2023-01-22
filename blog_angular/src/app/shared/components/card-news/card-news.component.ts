@@ -22,4 +22,19 @@ export class CardNewsComponent implements OnInit {
     this.router.navigate([`/news-details/${id}`])
   }
 
+  likeNews(i: number) {
+    const imgsLike = document.querySelectorAll('.img-like') as NodeListOf<HTMLImageElement>
+    imgsLike.forEach((img, index) => {
+      if (index === i) {
+        if(img.src.includes('assets/images/like.svg')) {
+          img.src = '../../../../assets/images/unlike.svg'
+        } else {
+          img.src = '../../../../assets/images/like.svg'
+        }
+      } else {
+        img.src =  '../../../../assets/images/unlike.svg'
+      }
+    })
+  }
+
 }
