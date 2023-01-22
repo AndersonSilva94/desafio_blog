@@ -1,7 +1,12 @@
 <section>
   <div class="header">
     <p>{{ news.publicationDate | date: 'd MMMM, y' : '' : 'pt-BR' }}</p>
-    <img src="../../../../assets/images/unlike.svg" alt="">
+    <img
+      class="img-like"
+      (click)="likeNews()"
+      [src]="'../../../../assets/images/unlike.svg'"
+      alt="ícone de curtida"
+    >
   </div>
 
   <h1 class="title">{{ news.title }}</h1>
