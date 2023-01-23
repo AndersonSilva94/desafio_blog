@@ -6,6 +6,7 @@ import { CardNewsComponent } from './components/card-news/card-news.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SectionMoreNewsComponent } from './components/section-more-news/section-more-news.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     NotFoundComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,

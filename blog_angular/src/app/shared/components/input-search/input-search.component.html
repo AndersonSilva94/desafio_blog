@@ -1,10 +1,10 @@
 <section>
-  <div class="container">
+  <form class="container" [formGroup]="inputForm">
     <div class="container-input">
       <div class="container-input-image">
         <img src="../../../../assets/images/search.svg" alt="Ícone de lupa, representando a pesquisa">
       </div>
-      <input type="text" placeholder="Pesquisar no blog">
+      <input formControlName="search" type="text" placeholder="Pesquisar no blog" (input)="getValue()">
     </div>
-  </div>
+  </form>
 </section>
