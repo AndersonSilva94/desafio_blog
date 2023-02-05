@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SectionMoreNewsComponent } from './components/section-more-news/section-more-news.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoadingComponent } from './components/loading/loading.component';
 
 
 
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CardNewsComponent,
     FooterComponent,
     SectionMoreNewsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CardNewsComponent,
     FooterComponent,
     SectionMoreNewsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoadingComponent
   ]
 })
 export class SharedModule { }
