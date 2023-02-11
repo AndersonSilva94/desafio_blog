@@ -7,7 +7,6 @@
     <app-card-news
       *ngIf="searchText === '' ||
         news.title.toLowerCase().includes(this.searchText.toLowerCase()) ||
-        news.text.toLowerCase().includes(this.searchText.toLowerCase()) ||
         news.sinopse.toLowerCase().includes(this.searchText.toLowerCase())"
       [news]="news"
     ></app-card-news>

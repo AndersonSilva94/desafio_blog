@@ -1,7 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
-const TIME = 500
-
 @Component({
   selector: 'app-input-search',
   templateUrl: './input-search.component.html',
