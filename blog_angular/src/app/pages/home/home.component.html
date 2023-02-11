@@ -1,12 +1,22 @@
-<app-input-search></app-input-search>
+<app-input-search
+  (valueChanged)="searchNews($event)"
+></app-input-search>
 
-<section class="container" *ngIf="news.length; else notFound">
-  <div class="container-list-card">
+<section *ngIf="!loading && listNews.length > 0" class="container-list-card">
+  <div *ngFor="let news of listNews">
     <app-card-news
-      [listNews]="news"
+      *ngIf="searchText === '' ||
+        news.title.toLowerCase().includes(this.searchText.toLowerCase()) ||
+        news.text.toLowerCase().includes(this.searchText.toLowerCase()) ||
+        news.sinopse.toLowerCase().includes(this.searchText.toLowerCase())"
+      [news]="news"
     ></app-card-news>
   </div>
 </section>
-<ng-template #notFound>
-  <app-not-found></app-not-found>
-</ng-template>
+<app-not-found
+  *ngIf="!loading && listNews.length === 0"
+></app-not-found>
+<app-loading
+  *ngIf="loading"
+></app-loading>
+

@@ -1,10 +1,10 @@
 <section>
-  <form class="container" [formGroup]="inputForm">
+  <div class="container">
     <div class="container-input">
       <div class="container-input-image">
         <img src="../../../../assets/images/search.svg" alt="Ícone de lupa, representando a pesquisa">
       </div>
-      <input formControlName="search" type="text" placeholder="Pesquisar no blog" (input)="getValue()">
+      <input type="text" [(ngModel)]="inputValue" placeholder="Pesquisar no blog" (input)="getValue()">
     </div>
-  </form>
+  </div>
 </section>

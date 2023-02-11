@@ -9,7 +9,7 @@ import { News } from 'src/app/shared/models/news';
 })
 export class CardNewsComponent implements OnInit {
 
-  @Input() listNews!: News[]
+  @Input() news!: News;
 
   constructor(
     private router: Router
@@ -23,18 +23,12 @@ export class CardNewsComponent implements OnInit {
   }
 
   likeNews(i: number) {
-    const imgsLike = document.querySelectorAll('.img-like') as NodeListOf<HTMLImageElement>
-    imgsLike.forEach((img, index) => {
-      if (index === i) {
-        if(img.src.includes('assets/images/like.svg')) {
-          img.src = '../../../../assets/images/unlike.svg'
-        } else {
-          img.src = '../../../../assets/images/like.svg'
-        }
-      } else {
-        img.src =  '../../../../assets/images/unlike.svg'
-      }
-    })
+    const imgLike = document.querySelector(`#img-${i}`) as HTMLImageElement
+    if(imgLike.src.includes('assets/images/like.svg')) {
+      imgLike.src = '../../../../assets/images/unlike.svg'
+    } else {
+      imgLike.src = '../../../../assets/images/like.svg'
+    }
   }
 
 }

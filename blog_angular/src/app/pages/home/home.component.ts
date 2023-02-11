@@ -1,6 +1,5 @@
-import { AfterViewChecked, AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { News } from 'src/app/shared/models/news';
-import { GeneralService } from 'src/app/shared/services/general.service';
 import { NewsService } from 'src/app/shared/services/news.service';
 
 @Component({
@@ -9,11 +8,12 @@ import { NewsService } from 'src/app/shared/services/news.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  news!: News[];
+  listNews!: News[];
+  loading: boolean = false;
+  searchText= '';
 
   constructor(
-    private newsService: NewsService,
-    private generalService: GeneralService
+    private newsService: NewsService
   ) { }
 
   ngOnInit(): void {
@@ -21,24 +21,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.searchNews()
+    // this.searchNews()
   }
 
   getNews() {
     this.newsService.getNews()
       .subscribe(
-        (res) => this.news = res.response
+        (res) => this.listNews = res.response,
+        (err) => console.error(err)
       )
   }
 
-  searchNews() {
-    this.news = [];
-    this.generalService.getResultsArrBySearch()
-    .subscribe(
-      (res) => {
-        this.news = res
-      },
-      (err) => console.error(err)
-      )
+  searchNews(value: string) {
+    this.searchText = value;
+    console.log(this.searchText)
+
   }
 }

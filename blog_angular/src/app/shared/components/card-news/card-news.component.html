@@ -1,9 +1,10 @@
-<div class="card" *ngFor="let news of listNews; let i = index">
+<div class="card">
   <div class="card-header">
     <p>{{ news.publicationDate | date: 'd MMMM, y' : '' : 'pt-BR' }}</p>
     <img
+      id="{{'img-' + news.id}}"
       class="img-like"
-      (click)="likeNews(i)"
+      (click)="likeNews(news.id)"
       [src]="'../../../../assets/images/unlike.svg'"
       alt="ícone de curtida"
     >
