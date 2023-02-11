@@ -49,4 +49,13 @@ export class NewsDetailsComponent implements OnInit {
     this.location.back();
   }
 
+  likeNews() {
+    const img = document.querySelector('.img-like') as HTMLImageElement
+    if(img.src.includes('assets/images/like.svg')) {
+      img.src = '../../../../assets/images/unlike.svg'
+    } else {
+      img.src = '../../../../assets/images/like.svg'
+    }
+  }
+
 }

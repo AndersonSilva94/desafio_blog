@@ -9,7 +9,7 @@ import { News } from 'src/app/shared/models/news';
 })
 export class CardNewsComponent implements OnInit {
 
-  @Input() listNews!: News[]
+  @Input() news!: News;
 
   constructor(
     private router: Router
@@ -20,6 +20,15 @@ export class CardNewsComponent implements OnInit {
 
   goToNews(id: number) {
     this.router.navigate([`/news-details/${id}`])
+  }
+
+  likeNews(i: number) {
+    const imgLike = document.querySelector(`#img-${i}`) as HTMLImageElement
+    if(imgLike.src.includes('assets/images/like.svg')) {
+      imgLike.src = '../../../../assets/images/unlike.svg'
+    } else {
+      imgLike.src = '../../../../assets/images/like.svg'
+    }
   }
 
 }

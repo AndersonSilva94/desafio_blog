@@ -4,7 +4,7 @@
       <div class="container-input-image">
         <img src="../../../../assets/images/search.svg" alt="Ícone de lupa, representando a pesquisa">
       </div>
-      <input type="text" placeholder="Pesquisar no blog">
+      <input type="text" [(ngModel)]="inputValue" placeholder="Pesquisar no blog" (input)="getValue()">
     </div>
   </div>
 </section>

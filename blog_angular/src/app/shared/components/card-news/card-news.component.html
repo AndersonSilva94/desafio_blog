@@ -1,7 +1,13 @@
-<div class="card" *ngFor="let news of listNews">
+<div class="card">
   <div class="card-header">
     <p>{{ news.publicationDate | date: 'd MMMM, y' : '' : 'pt-BR' }}</p>
-    <img src="../../../../assets/images/unlike.svg" alt="">
+    <img
+      id="{{'img-' + news.id}}"
+      class="img-like"
+      (click)="likeNews(news.id)"
+      [src]="'../../../../assets/images/unlike.svg'"
+      alt="ícone de curtida"
+    >
   </div>
   <h2 class="card-title" (click)="goToNews(news.id)">{{ news.title }}</h2>
   <p class="card-sinopse">{{ news.sinopse }}</p>
