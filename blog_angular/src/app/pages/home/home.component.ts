@@ -40,4 +40,8 @@ export class HomeComponent implements OnInit {
   searchNews(value: string) {
     this.searchText = value;
   }
+
+  verifyIfExistsResults(property: string, value: string) {
+    return this.listNews.some((news: any) => news[property].toLowerCase().includes(value.toLowerCase()))
+  }
 }

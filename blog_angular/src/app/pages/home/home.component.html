@@ -11,10 +11,10 @@
       [news]="news"
     ></app-card-news>
   </div>
+  <app-not-found
+    *ngIf="searchText !== '' && !(verifyIfExistsResults('title', this.searchText) || verifyIfExistsResults('sinopse', this.searchText))"
+  ></app-not-found>
 </section>
-<app-not-found
-  *ngIf="!loading && listNews.length === 0"
-></app-not-found>
 <app-loading
   *ngIf="loading"
 ></app-loading>
