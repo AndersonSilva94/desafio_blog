@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { News } from 'src/app/shared/models/news';
 import { NewsService } from 'src/app/shared/services/news.service';
 
+const TIME = 500;
+
 @Component({
   selector: 'app-news-details',
   templateUrl: './news-details.component.html',
@@ -14,6 +16,7 @@ export class NewsDetailsComponent implements OnInit {
   newsId!: number;
   news!: News
   moreNewsList!: News[];
+  loading: boolean = false
 
   constructor(
     private newsService: NewsService,
@@ -24,8 +27,12 @@ export class NewsDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.newsId = Number(this.route.snapshot.params["id"])
     if(this.newsId) {
-      this.getNewsById(this.newsId);
-      this.getOtherNews(this.newsId)
+      this.loading = true
+      setTimeout(() => {
+        this.getNewsById(this.newsId);
+        this.getOtherNews(this.newsId);
+        this.loading = false
+      }, TIME);
     }
   }
 

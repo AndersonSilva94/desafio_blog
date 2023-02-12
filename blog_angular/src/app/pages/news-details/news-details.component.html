@@ -1,4 +1,4 @@
-<section>
+<section *ngIf="!loading">
   <div class="header">
     <p>{{ news.publicationDate | date: 'd MMMM, y' : '' : 'pt-BR' }}</p>
     <img
@@ -16,9 +16,13 @@
     <p>Voltar</p>
   </div>
 </section>
-<section class="more-news">
+<section *ngIf="!loading" class="more-news">
   <app-section-more-news
     [newsList]="moreNewsList"
   >
   </app-section-more-news>
 </section>
+
+<app-loading
+  *ngIf="loading"
+></app-loading>
